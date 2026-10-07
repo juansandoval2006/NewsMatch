@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NewsMatch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- SPLASH / GPS -->
+  <section id="screen-splash" class="screen">
+    <h1>🎯 NewsMatch</h1>
+    <p>Noticias personalizadas para ti.</p>
+    <button id="btn-start">Comenzar</button>
+  </section>
+
+  <!-- REGISTRO -->
+  <section id="screen-registro" class="screen hidden">
+    <h2>Bienvenido a NewsMatch</h2>
+    <label>Nombre: <input id="reg-nombre" type="text"></label>
+    <label>Email (opcional): <input id="reg-email" type="email"></label>
+    <label>Edad: <input id="reg-edad" type="number" min="10" max="110"></label>
+    <label>Género:
+      <select id="reg-genero">
+        <option value="no especifico">Prefiero no decir</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+        <option value="otro">Otro</option>
+      </select>
+    </label>
+    <label>Idioma de las noticias:
+      <select id="reg-idioma">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </label>
+    <button id="btn-registro">Continuar</button>
+  </section>
+
+  <!-- ONBOARDING CATEGORÍAS -->
+  <section id="screen-onboarding" class="screen hidden">
+    <h2>Según tu perfil, te sugerimos:</h2>
+    <div id="onboarding-cats"></div>
+    <p>Puedes cambiar esto cuando quieras desde Configuración.</p>
+    <button id="btn-empezar">Empezar</button>
+  </section>
+
+  <!-- HOME -->
+  <section id="screen-home" class="screen hidden">
+    <header>
+      <h2>= NewsMatch</h2>
+      <button id="btn-config" title="Configuración">⚙️</button>
+    </header>
+    <div id="ubicacion-info"></div>
+    <input id="search-input" placeholder="🔍 Buscar noticias...">
+    <div id="cat-chips"></div>
+    <div id="feed"></div>
+    <nav>
+      <button id="btn-nav-home">🏠 Inicio</button>
+      <button id="btn-nav-notif">🔔 Notificaciones</button>
+      <button id="btn-nav-fav">⭐ Favoritos</button>
+    </nav>
+  </section>
+
+  <!-- DETALLE -->
+  <section id="screen-detalle" class="screen hidden">
+    <button id="btn-volver">← Volver</button>
+    <div id="detalle-contenido"></div>
+  </section>
+
+  <!-- CONFIGURACIÓN -->
+  <section id="screen-config" class="screen hidden">
+    <h2>← Configuración <button id="btn-config-volver">Cerrar</button></h2>
+    <h3>Perfil</h3>
+    <label>Edad: <input id="cfg-edad" type="number"></label>
+    <label>Género:
+      <select id="cfg-genero">
+        <option value="no especifico">Prefiero no decir</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+        <option value="otro">Otro</option>
+      </select>
+    </label>
+    <h3>Interfaz</h3>
+    <label>Tema:
+      <select id="cfg-tema"><option value="claro">Claro</option><option value="oscuro">Oscuro</option></select>
+    </label>
+    <label>Tamaño texto:
+      <select id="cfg-fuente"><option value="normal">Normal</option><option value="grande">Grande</option></select>
+    </label>
+    <h3>Contenido</h3>
+    <label><input type="checkbox" id="cfg-usar-gps"> Usar mi ubicación</label>
+    <label>País: <input id="cfg-pais" placeholder="co, us, mx..." maxlength="2"></label>
+    <label>Idioma:
+      <select id="cfg-idioma">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </label>
+    <h4>Categorías favoritas:</h4>
+    <div id="cfg-cats"></div>
+    <button id="btn-guardar">Guardar cambios</button>
+    <h3>Seguimiento de uso</h3>
+    <button id="btn-ver-tracking">Ver mis acciones registradas</button>
+    <pre id="tracking-log"></pre>
+  </section>
+
+  <!-- NOTIFICACIONES -->
+  <section id="screen-notif" class="screen hidden">
+    <h2>🔔 Notificaciones</h2>
+    <button id="btn-revisar-notif">Buscar alertas nuevas</button>
+    <div id="notif-lista"></div>
+    <button id="btn-notif-volver">← Volver</button>
+  </section>
+
+  <!-- FAVORITOS -->
+  <section id="screen-fav" class="screen hidden">
+    <h2>⭐ Favoritos</h2>
+    <div id="fav-lista"></div>
+    <button id="btn-fav-volver">← Volver</button>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

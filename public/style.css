@@ -1,0 +1,26 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f4f4f4; color: #222; }
+body.tema-oscuro { background: #121212; color: #eee; }
+body.fuente-grande { font-size: 20px; }
+#app { max-width: 520px; margin: 0 auto; min-height: 100vh; background: inherit; }
+.screen { padding: 20px; }
+.hidden { display: none; }
+h1, h2 { margin-top: 0; }
+label { display: block; margin: 10px 0; }
+input, select { padding: 8px; width: 100%; max-width: 320px; }
+input[type=checkbox] { width: auto; }
+button { padding: 10px 16px; margin: 6px 4px; border: none; border-radius: 8px; background: #1e88e5; color: #fff; cursor: pointer; }
+button:hover { opacity: 0.85; }
+#search-input { width: 100%; margin-bottom: 10px; }
+#cat-chips button { background: #555; }
+#cat-chips button.activo { background: #1e88e5; }
+.noticia { border: 1px solid #8884; border-radius: 10px; padding: 10px; margin: 12px 0; }
+.noticia img { width: 100%; border-radius: 8px; max-height: 200px; object-fit: cover; }
+.noticia .meta { color: #888; font-size: 0.85em; }
+#ubicacion-info { background: #1e88e522; padding: 8px; border-radius: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+nav button { background: #333; }
+body.tema-oscuro nav button { background: #222; border: 1px solid #444; }
+#detalle-contenido img { width: 100%; border-radius: 10px; }
+pre { background: #00000033; padding: 10px; max-height: 200px; overflow: auto; white-space: pre-wrap; }
+.notif { border-left: 4px solid #1e88e5; padding: 8px; margin: 8px 0; background: #1e88e511; }
+.notif.abierta { opacity: 0.6; border-left-color: #999; }
